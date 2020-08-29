@@ -54,9 +54,9 @@ class LoginForm(forms.Form):
     )
 
     def clean(self):
-        clean_data = super().clean()
-        email = clean_data.get('email')
-        password = clean_data.get('password')
+        cleaned_data = super().clean()
+        email = cleaned_data.get('email')
+        password = cleaned_data.get('password')
 
         if email and password:
             try:
